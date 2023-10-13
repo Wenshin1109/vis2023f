@@ -217,17 +217,32 @@
         <tr>
           <td rowspan="7" id="myTotal"></td>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
-          <td id='m1'>3</td>
-          <td>Simple baseline - 在場景中加入虛擬解說員、繳交預演版與正式版的影片&音檔</td>
+          <td id='m1'>1</td>
+          <td>Simple baseline - 在場景中加入虛擬解說員</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>5</td>
-          <td>Medium baseline - 虛擬解說員進行解說、繳交左右對照影片 </td>
+          <td id='m2'>1</td>
+          <td>Simple baseline - 繳交預演版影片與音檔</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
-          <td id='m3'>2</td>
+          <td id='m3'>1</td>
+          <td>Simple baseline - 繳交正式版影片與音檔</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td id='m4'>3</td>
+          <td>Medium baseline - 虛擬解說員進行解說</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked></td>
+          <td id='m5'>2</td>
+          <td>Medium baseline - 繳交左右對照影片</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked></td>
+          <td id='m6'>2</td>
           <td>Strong baseline - 加入臉部表情：眨眼、動嘴巴 </td>
         </tr>
       </table>
@@ -269,6 +284,9 @@
   d3.select("#myCheckbox1").on("change",update);
   d3.select("#myCheckbox2").on("change",update);
   d3.select("#myCheckbox3").on("change",update);
+  d3.select("#myCheckbox4").on("change",update);
+  d3.select("#myCheckbox5").on("change",update);
+  d3.select("#myCheckbox6").on("change",update);
 
   update();
   
@@ -286,6 +304,17 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
+    if (d3.select("#myCheckbox6").property("checked")){
+      score += parseInt(d3.select('#m6').html());   
     }
 
     d3.select("#myTotal").html(score);    
