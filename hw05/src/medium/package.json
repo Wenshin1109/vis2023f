@@ -1,0 +1,14 @@
+{
+  "name": "b3ba92ea803d2039",
+  "main": "b3ba92ea803d2039@26.js",
+  "version": "26.0.0",
+  "homepage": "https://observablehq.com/d/b3ba92ea803d2039",
+  "author": {
+    "name": "Wenshin's Workspace",
+    "url": "https://observablehq.com/@wenshin-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
